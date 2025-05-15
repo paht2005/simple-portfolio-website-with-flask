@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0fb;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0b579c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 960px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        h1, h2 {
+            color: #0b579c;
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project-item {
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+            padding: 15px;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+        }
+        .project-item img {
+            max-width: 100%;
+            border-radius: 4px;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .project-item h3 {
+            margin-top: 0;
+            color: #064273;
+        }
+        .project-item p {
+            color: #444;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #0b579c;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .project-link:hover {
+            background-color: #08457a;
+        }
+        footer {
+            background-color: #0b579c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('view_feedback') }}">Feedback</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Welcome to My Portfolio</h2>
+    <p>Explore my projects and get in touch!</p>
+
+    <h2>Featured Projects</h2>
+    {% if projects %}
+    <ul class="project-list">
+        {% for project in projects %}
+        <li class="project-item">
+            <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <a href="{{ project.link }}" class="project-link" target="_blank" rel="noopener">View Project</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No projects available at the moment.</p>
+    {% endif %}
+</main>
+
+<footer>
+    <p>© 2025 Nguyen Cong Phat [paht2005]. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<h1>Contact Me</h1>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
+
+    <input type="submit" value="Send">
+</form>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <p class="{{ category }}">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Feedback{% endblock %}
+{% block content %}
+<h1>Feedback Submissions</h1>
+<ul>
+    {% for feedback in feedbacks %}
+        <li>
+            <strong>{{ feedback.name }} ({{ feedback.email }})</strong>: {{ feedback.message }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

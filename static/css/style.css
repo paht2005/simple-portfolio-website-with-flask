@@ -1,0 +1,167 @@
+
+
+/* Reset and basic */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scroll */
+}
+
+/* Header */
+header {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #90e0ef;
+    text-decoration: underline;
+}
+
+/* Main container */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #023e8a;
+}
+
+/* Projects grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Single project card */
+.project {
+    background: #ffffff;
+    border: 1px solid #d0e8f2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+    cursor: pointer;
+}
+.project:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+/* Project image */
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Project content padding */
+.project-content {
+    padding: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    background: #0077b6;
+    color: white;
+    padding: 15px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Inputs and textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 5px #90e0ef;
+}
+
+/* Buttons */
+input[type="submit"],
+button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    align-self: flex-start;
+}
+input[type="submit"]:hover,
+button:hover {
+    background-color: #023e8a;
+}
+input[type="submit"]:active,
+button:active {
+    transform: scale(0.95);
+}
+
+/* Flash message styles */
+.success {
+    color: green;
+    font-weight: bold;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Fade-in animation for elements */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
