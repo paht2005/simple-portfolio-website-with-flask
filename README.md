@@ -53,22 +53,22 @@ Welcome to the **Simple Portfolio Website** built using **Flask** – a minimal,
   ```bash
   git clone https://github.com/paht2005/simple-portfolio-website-with-flask.git
   cd simple-portfolio-website-with-flask
-    ```
+  ```
 
 2.  **Install dependencies:**
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 3.  **Execute project scripts:**
 
-    ```bash
-    python Portfolio_Website_app.py # or python3 Portfolio_Website_app.py
-    ```
+   ```bash
+   python Portfolio_Website_app.py # or python3 Portfolio_Website_app.py
+   ```
 4. **Open browser:**
     
-- Visit: http://127.0.0.1:5000/
+- Visit: `http://127.0.0.1:5000/`
 
 ---
 ## 🎯 Usage
