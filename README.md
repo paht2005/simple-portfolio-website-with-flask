@@ -2,7 +2,7 @@
 
 Welcome to the **Simple Portfolio Website** built using **Flask** – a minimal, clean, and fully functional portfolio template for developers. This project aims to help individuals showcase their personal projects, skills, and contact information through a simple yet elegant web interface powered by Python Flask.
 
-![demo](#demoWeb.png)
+![demo](demoWeb.png)
 
 ## 🗂️ Table of Contents
 
