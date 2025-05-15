@@ -68,7 +68,7 @@ Welcome to the **Simple Portfolio Website** built using **Flask** – a minimal,
     ```
 4. **Open browser:**
     
-- Visit: `http://127.0.0.1:5000/`
+- Visit: http://127.0.0.1:5000/
 
 ---
 ## 🎯 Usage
